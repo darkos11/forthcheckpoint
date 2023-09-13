@@ -1,0 +1,21 @@
+ALGORITHM palindrome
+VAR
+  
+BEGIN
+  
+  // Cas de base : un mot vide ou un mot avec un seul caractère est un palindrome
+  if (word.length <= 1) {
+    return true;
+  }
+
+  // Compare le premier et le dernier caractère du mot
+  if (word[0] === word[word.length - 1]) {
+    // Si les caractères sont égaux, récursivement vérifier le reste du mot
+    return isPalindrome(word.slice(1, -1));
+  } else {
+    // Si les caractères sont différents, ce n'est pas un palindrome
+    return false;
+  }
+}
+}
+END
